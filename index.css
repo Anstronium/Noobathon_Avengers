@@ -1,0 +1,39 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  overflow: hidden;
+}
+.animationContainer {
+  height: 600px;
+  width: 100%;
+  background-color: #8ec5fc;
+  background-image: linear-gradient(30deg, #8ec5fc 0%, #e0c3fc 100%);
+  position: relative;
+  font-family: inherit;
+}
+#rideButton {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  right: 10px;
+  bottom: -100px;
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  font-size: larger;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 100;
+}
+#rideButton:hover {
+  box-shadow: 1px 1px 10px black;
+}
+#cycleAnimation {
+    position: absolute;
+    left: -100px;
+    top: 50px;
+    transition: all 10s;
+}

@@ -1,64 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Title</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sidebar.css" />
+    <link rel="stylesheet" href="standard.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-
-    <header class="header" id="header">
-        <div class="header__toggle">
-            <i class='bx bx-menu' id='header-toggle'></i>
-        </div>
-         <div class="l-navbar" id="nav-bar">
-        <nav class="nav">
-            <div>
-                <a href="index.html" class="nav__logo">
-                    <i class='bx bx-cycling' ></i>
-                    <span class="nav__logo-name">Ride Free</span>
-                </a>
+    <!-- SIDEBAR STARTS  -->
+    <div id="sidebar">
+        <div class="sidebar_tile">
+            <h2 class="sidebar_item_name">Cycle Ride</h2>
+            <img src="" alt="">
+            <div id="sidebarCloseButton">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"></path>
+                </svg>
             </div>
+        </div>
+        <div class="sidebar_item" id="add-post">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                </path>
+            </svg>
+            <h4 class="sidebar_item_name">Contact</h4>
+        </div>
 
-            <div class="nav__list">
-                <a href="" class="nav__link">
-                    <i class='bx bx-search' ></i>
-                    <span class="nav__name">Search Cycles</span>
-                </a>
-                <a href="" class="nav__link">
-                    <i class='bx bx-info-circle'></i>
-                    <span class="nav__name">About Us</span>
-                </a>
-                <a href="" class="nav__link">
-                    <i class='bx bxs-contact'></i>
-                    <span class="nav__name">Contact Us</span>
-                </a>
-                <a href="" class="nav__link">
-                    <i class='bx bxs-file'></i>
-                    <span class="nav__name">Terms &amp; Conditions</span>
-                </a>
-             </div>
-        </nav>
+        <div class="sidebar_item" id="edit-post">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+            <h4 class="sidebar_item_name">Search</h4>
+        </div>
+        <div class="sidebar_item" id="post-status">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <h4 class="sidebar_item_name">Post Status</h4>
+        </div>
+        <div class="sidebar_item logout" id="logout">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1">
+                </path>
+            </svg>
+            <h4 class="sidebar_item_name">Logout</h4>
+        </div>
     </div>
 
 
-    </header>
 
-    <main>
-        <div class="container">
-            <div class="main-text">
-               START RIDING A BIKE!
-                <h4>Quick and easy online bike rental platform!</h4>
-            </div>
-        </div>
-    </main>
+    <!-- Animation -->
+    <div class="animationContainer">
+        <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_OQlozm.json" background="transparent"
+            speed="1" style="width: 300px; height: 300px;" loop id="cycleAnimation"></lottie-player>
 
-    <footer>
+        <button id="rideButton">Get a Ride</button>
+    </div>
 
-    </footer>
-
-    <script src="index_script.js"></script>
 </body>
+<script src="./sidebar.js"></script>
+<script src="./utils.js"></script>
+<script src="./index.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
 </html>
